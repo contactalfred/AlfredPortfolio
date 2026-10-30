@@ -1,0 +1,282 @@
+@import "tailwindcss";
+
+/* ===== Jet Black, Royal Amethyst & Electric Cyan Theme ===== */
+@theme {
+  /* Jet Black Palette (Deep rich obsidian base) */
+  --color-jet-50: #f5f4f8;
+  --color-jet-100: #e8e6f1;
+  --color-jet-200: #cfcbe2;
+  --color-jet-300: #a7a0c8;
+  --color-jet-400: #7a70a8;
+  --color-jet-500: #554b83;
+  --color-jet-600: #38315a;
+  --color-jet-700: #231d3b;
+  --color-jet-800: #141122;
+  --color-jet-850: #0d0b16;
+  --color-jet-900: #08070d;
+  --color-jet-950: #040306;
+
+  /* Backward-compatible Navy aliases -> Jet Black */
+  --color-navy-50: #f5f4f8;
+  --color-navy-100: #e8e6f1;
+  --color-navy-200: #cfcbe2;
+  --color-navy-300: #a7a0c8;
+  --color-navy-400: #7a70a8;
+  --color-navy-500: #554b83;
+  --color-navy-600: #38315a;
+  --color-navy-700: #231d3b;
+  --color-navy-800: #141122;
+  --color-navy-900: #08070d;
+  --color-navy-950: #040306;
+
+  /* Royal Amethyst Palette */
+  --color-amethyst-50: #faf5ff;
+  --color-amethyst-100: #f3e8ff;
+  --color-amethyst-200: #e9d5ff;
+  --color-amethyst-300: #d8b4fe;
+  --color-amethyst-400: #c084fc;
+  --color-amethyst-500: #a855f7;
+  --color-amethyst-600: #9333ea;
+  --color-amethyst-700: #7e22ce;
+  --color-amethyst-800: #581c87;
+  --color-amethyst-900: #3b0764;
+  --color-amethyst-950: #1f0238;
+
+  /* Electric Cyan Palette */
+  --color-cyan-50: #f0fdff;
+  --color-cyan-100: #ccfbf1;
+  --color-cyan-200: #99f6e4;
+  --color-cyan-300: #38e8f8;
+  --color-cyan-400: #00f0ff;
+  --color-cyan-500: #00d2eb;
+  --color-cyan-600: #00a4bd;
+  --color-cyan-700: #088096;
+  --color-cyan-800: #0f6677;
+  --color-cyan-900: #115362;
+  --color-cyan-950: #032b35;
+
+  /* Backward-compatible Teal aliases -> Electric Cyan */
+  --color-teal-50: #f0fdff;
+  --color-teal-100: #ccfbf1;
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #38e8f8;
+  --color-teal-400: #00f0ff;
+  --color-teal-500: #00d2eb;
+  --color-teal-600: #00a4bd;
+  --color-teal-700: #088096;
+  --color-teal-800: #0f6677;
+  --color-teal-900: #115362;
+  --color-teal-950: #032b35;
+
+  /* Accents */
+  --color-accent: #00f0ff;
+  --color-accent-light: #38e8f8;
+  --color-accent-dark: #00a4bd;
+  --color-royal: #9333ea;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* ===== Base Styles ===== */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-jet-950);
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-jet-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-amethyst-800);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-amethyst-600);
+}
+
+/* ===== Animation Keyframes ===== */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(147, 51, 234, 0.25), 0 0 40px rgba(0, 240, 255, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(147, 51, 234, 0.5), 0 0 65px rgba(0, 240, 255, 0.35);
+  }
+}
+
+@keyframes pulse-cyan {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 240, 255, 0.65);
+  }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes typewriter-cursor {
+  0%, 100% { border-color: var(--color-cyan-400); }
+  50% { border-color: transparent; }
+}
+
+/* ===== Utility Animations ===== */
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out forwards;
+}
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+.animate-slide-left {
+  animation: slide-in-left 0.7s ease-out forwards;
+}
+.animate-slide-right {
+  animation: slide-in-right 0.7s ease-out forwards;
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+.animate-pulse-cyan {
+  animation: pulse-cyan 2.5s ease-in-out infinite;
+}
+
+/* Staggered delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+
+/* Scroll reveal classes */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Gradient Text ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #00f0ff 0%, #c084fc 40%, #9333ea 70%, #00f0ff 100%);
+  background-size: 250% 250%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 5s ease-in-out infinite;
+}
+
+.gradient-text-amethyst {
+  background: linear-gradient(135deg, #e9d5ff 0%, #c084fc 50%, #9333ea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(135deg, #ccfbf1 0%, #00f0ff 55%, #00a4bd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== Glass Effects ===== */
+.glass {
+  background: rgba(13, 11, 22, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(147, 51, 234, 0.2);
+}
+.glass:hover {
+  border-color: rgba(0, 240, 255, 0.35);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(147, 51, 234, 0.18);
+}
+.glass-light:hover {
+  border-color: rgba(0, 240, 255, 0.4);
+}
+
+/* ===== Background Grid Pattern ===== */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(147, 51, 234, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.06) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* ===== Section Styles ===== */
+.section-padding {
+  @apply px-4 py-20 sm:px-6 md:px-8 lg:px-16 xl:px-24 md:py-28;
+}
