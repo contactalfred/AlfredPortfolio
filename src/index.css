@@ -1,78 +1,109 @@
 @import "tailwindcss";
 
-/* ===== Jet Black, Royal Amethyst & Electric Cyan Theme ===== */
+/* ===== Amber Mirage Theme: #FFF5E1, #EBC176, #C48B28, #5A3C0B ===== */
 @theme {
-  /* Jet Black Palette (Deep rich obsidian base) */
-  --color-jet-50: #f5f4f8;
-  --color-jet-100: #e8e6f1;
-  --color-jet-200: #cfcbe2;
-  --color-jet-300: #a7a0c8;
-  --color-jet-400: #7a70a8;
-  --color-jet-500: #554b83;
-  --color-jet-600: #38315a;
-  --color-jet-700: #231d3b;
-  --color-jet-800: #141122;
-  --color-jet-850: #0d0b16;
-  --color-jet-900: #08070d;
-  --color-jet-950: #040306;
+  /* Core Amber Mirage Colors */
+  --color-amber-cream: #FFF5E1;   /* Pale champagne mirage */
+  --color-amber-sand: #EBC176;    /* Radiant warm gold */
+  --color-amber-primary: #C48B28; /* Rich burnished amber */
+  --color-amber-deep: #5A3C0B;    /* Deep antique bronze */
 
-  /* Backward-compatible Navy aliases -> Jet Black */
-  --color-navy-50: #f5f4f8;
-  --color-navy-100: #e8e6f1;
-  --color-navy-200: #cfcbe2;
-  --color-navy-300: #a7a0c8;
-  --color-navy-400: #7a70a8;
-  --color-navy-500: #554b83;
-  --color-navy-600: #38315a;
-  --color-navy-700: #231d3b;
-  --color-navy-800: #141122;
-  --color-navy-900: #08070d;
-  --color-navy-950: #040306;
+  /* Full Amber Scale */
+  --color-amber-50: #FFF5E1;
+  --color-amber-100: #faebd0;
+  --color-amber-200: #f3dbab;
+  --color-amber-300: #EBC176;
+  --color-amber-400: #d9a444;
+  --color-amber-500: #C48B28;
+  --color-amber-600: #a36e1c;
+  --color-amber-700: #7e5212;
+  --color-amber-800: #5A3C0B;
+  --color-amber-900: #382305;
+  --color-amber-950: #1c1102;
 
-  /* Royal Amethyst Palette */
-  --color-amethyst-50: #faf5ff;
-  --color-amethyst-100: #f3e8ff;
-  --color-amethyst-200: #e9d5ff;
-  --color-amethyst-300: #d8b4fe;
-  --color-amethyst-400: #c084fc;
-  --color-amethyst-500: #a855f7;
-  --color-amethyst-600: #9333ea;
-  --color-amethyst-700: #7e22ce;
-  --color-amethyst-800: #581c87;
-  --color-amethyst-900: #3b0764;
-  --color-amethyst-950: #1f0238;
+  /* Deep Obsidian-Espresso Canvas */
+  --color-obsidian-50: #fbf9f5;
+  --color-obsidian-100: #f5ede2;
+  --color-obsidian-200: #ebd9c4;
+  --color-obsidian-300: #d8bfa2;
+  --color-obsidian-400: #b39774;
+  --color-obsidian-500: #8a6f4e;
+  --color-obsidian-600: #5e4932;
+  --color-obsidian-700: #3b2c1d;
+  --color-obsidian-800: #22180e;
+  --color-obsidian-850: #171009;
+  --color-obsidian-900: #110b06;
+  --color-obsidian-950: #0a0603;
 
-  /* Electric Cyan Palette */
-  --color-cyan-50: #f0fdff;
-  --color-cyan-100: #ccfbf1;
-  --color-cyan-200: #99f6e4;
-  --color-cyan-300: #38e8f8;
-  --color-cyan-400: #00f0ff;
-  --color-cyan-500: #00d2eb;
-  --color-cyan-600: #00a4bd;
-  --color-cyan-700: #088096;
-  --color-cyan-800: #0f6677;
-  --color-cyan-900: #115362;
-  --color-cyan-950: #032b35;
+  /* Backward-compatible Aliases for Jet / Navy -> Obsidian Base */
+  --color-jet-50: #fbf9f5;
+  --color-jet-100: #f5ede2;
+  --color-jet-200: #ebd9c4;
+  --color-jet-300: #d8bfa2;
+  --color-jet-400: #b39774;
+  --color-jet-500: #8a6f4e;
+  --color-jet-600: #5e4932;
+  --color-jet-700: #3b2c1d;
+  --color-jet-800: #22180e;
+  --color-jet-850: #171009;
+  --color-jet-900: #110b06;
+  --color-jet-950: #0a0603;
 
-  /* Backward-compatible Teal aliases -> Electric Cyan */
-  --color-teal-50: #f0fdff;
-  --color-teal-100: #ccfbf1;
-  --color-teal-200: #99f6e4;
-  --color-teal-300: #38e8f8;
-  --color-teal-400: #00f0ff;
-  --color-teal-500: #00d2eb;
-  --color-teal-600: #00a4bd;
-  --color-teal-700: #088096;
-  --color-teal-800: #0f6677;
-  --color-teal-900: #115362;
-  --color-teal-950: #032b35;
+  --color-navy-50: #fbf9f5;
+  --color-navy-100: #f5ede2;
+  --color-navy-200: #ebd9c4;
+  --color-navy-300: #d8bfa2;
+  --color-navy-400: #b39774;
+  --color-navy-500: #8a6f4e;
+  --color-navy-600: #5e4932;
+  --color-navy-700: #3b2c1d;
+  --color-navy-800: #22180e;
+  --color-navy-900: #110b06;
+  --color-navy-950: #0a0603;
 
-  /* Accents */
-  --color-accent: #00f0ff;
-  --color-accent-light: #38e8f8;
-  --color-accent-dark: #00a4bd;
-  --color-royal: #9333ea;
+  /* Backward-compatible Aliases for Amethyst -> Amber Deep & Primary */
+  --color-amethyst-50: #FFF5E1;
+  --color-amethyst-100: #faebd0;
+  --color-amethyst-200: #f3dbab;
+  --color-amethyst-300: #EBC176;
+  --color-amethyst-400: #d9a444;
+  --color-amethyst-500: #C48B28;
+  --color-amethyst-600: #a36e1c;
+  --color-amethyst-700: #7e5212;
+  --color-amethyst-800: #5A3C0B;
+  --color-amethyst-900: #382305;
+  --color-amethyst-950: #1c1102;
+
+  /* Backward-compatible Aliases for Cyan / Teal -> Amber Sand & Cream */
+  --color-cyan-50: #FFF5E1;
+  --color-cyan-100: #faebd0;
+  --color-cyan-200: #f3dbab;
+  --color-cyan-300: #FFF5E1;
+  --color-cyan-400: #EBC176;
+  --color-cyan-500: #C48B28;
+  --color-cyan-600: #a36e1c;
+  --color-cyan-700: #7e5212;
+  --color-cyan-800: #5A3C0B;
+  --color-cyan-900: #382305;
+  --color-cyan-950: #1c1102;
+
+  --color-teal-50: #FFF5E1;
+  --color-teal-100: #faebd0;
+  --color-teal-200: #f3dbab;
+  --color-teal-300: #FFF5E1;
+  --color-teal-400: #EBC176;
+  --color-teal-500: #C48B28;
+  --color-teal-600: #a36e1c;
+  --color-teal-700: #7e5212;
+  --color-teal-800: #5A3C0B;
+  --color-teal-900: #382305;
+  --color-teal-950: #1c1102;
+
+  /* Core Accent Tokens */
+  --color-accent: #EBC176;
+  --color-accent-light: #FFF5E1;
+  --color-accent-dark: #C48B28;
+  --color-royal: #C48B28;
 
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
@@ -85,8 +116,8 @@
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-jet-950);
-  color: #ffffff;
+  background-color: var(--color-obsidian-950);
+  color: #FFF5E1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -96,14 +127,14 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-jet-950);
+  background: var(--color-obsidian-950);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-amethyst-800);
+  background: var(--color-amber-800);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-amethyst-600);
+  background: var(--color-amber-500);
 }
 
 /* ===== Animation Keyframes ===== */
@@ -152,19 +183,19 @@ body {
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 25px rgba(147, 51, 234, 0.25), 0 0 40px rgba(0, 240, 255, 0.15);
+    box-shadow: 0 0 25px rgba(196, 139, 40, 0.25), 0 0 45px rgba(235, 193, 118, 0.18);
   }
   50% {
-    box-shadow: 0 0 45px rgba(147, 51, 234, 0.5), 0 0 65px rgba(0, 240, 255, 0.35);
+    box-shadow: 0 0 45px rgba(196, 139, 40, 0.55), 0 0 65px rgba(235, 193, 118, 0.35);
   }
 }
 
-@keyframes pulse-cyan {
+@keyframes pulse-amber {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 15px rgba(235, 193, 118, 0.35);
   }
   50% {
-    box-shadow: 0 0 35px rgba(0, 240, 255, 0.65);
+    box-shadow: 0 0 35px rgba(235, 193, 118, 0.7);
   }
 }
 
@@ -175,7 +206,7 @@ body {
 }
 
 @keyframes typewriter-cursor {
-  0%, 100% { border-color: var(--color-cyan-400); }
+  0%, 100% { border-color: var(--color-amber-sand); }
   50% { border-color: transparent; }
 }
 
@@ -198,8 +229,8 @@ body {
 .animate-pulse-glow {
   animation: pulse-glow 3s ease-in-out infinite;
 }
-.animate-pulse-cyan {
-  animation: pulse-cyan 2.5s ease-in-out infinite;
+.animate-pulse-amber {
+  animation: pulse-amber 2.5s ease-in-out infinite;
 }
 
 /* Staggered delays */
@@ -225,7 +256,7 @@ body {
 
 /* ===== Gradient Text ===== */
 .gradient-text {
-  background: linear-gradient(135deg, #00f0ff 0%, #c084fc 40%, #9333ea 70%, #00f0ff 100%);
+  background: linear-gradient(135deg, #FFF5E1 0%, #EBC176 35%, #C48B28 70%, #FFF5E1 100%);
   background-size: 250% 250%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -233,15 +264,8 @@ body {
   animation: gradient-shift 5s ease-in-out infinite;
 }
 
-.gradient-text-amethyst {
-  background: linear-gradient(135deg, #e9d5ff 0%, #c084fc 50%, #9333ea 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.gradient-text-cyan {
-  background: linear-gradient(135deg, #ccfbf1 0%, #00f0ff 55%, #00a4bd 100%);
+.gradient-text-amber {
+  background: linear-gradient(135deg, #FFF5E1 0%, #EBC176 50%, #C48B28 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -249,30 +273,30 @@ body {
 
 /* ===== Glass Effects ===== */
 .glass {
-  background: rgba(13, 11, 22, 0.72);
+  background: rgba(17, 11, 6, 0.78);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(147, 51, 234, 0.2);
+  border: 1px solid rgba(196, 139, 40, 0.22);
 }
 .glass:hover {
-  border-color: rgba(0, 240, 255, 0.35);
+  border-color: rgba(235, 193, 118, 0.45);
 }
 
 .glass-light {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 245, 225, 0.035);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(147, 51, 234, 0.18);
+  border: 1px solid rgba(196, 139, 40, 0.22);
 }
 .glass-light:hover {
-  border-color: rgba(0, 240, 255, 0.4);
+  border-color: rgba(235, 193, 118, 0.45);
 }
 
 /* ===== Background Grid Pattern ===== */
 .bg-grid {
   background-image:
-    linear-gradient(rgba(147, 51, 234, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 240, 255, 0.06) 1px, transparent 1px);
+    linear-gradient(rgba(196, 139, 40, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(235, 193, 118, 0.06) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 

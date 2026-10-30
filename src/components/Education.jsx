@@ -33,10 +33,10 @@ export default function Education() {
   const [gridRef, gridVisible] = useScrollReveal({ threshold: 0.05 });
 
   return (
-    <section id="education" className="relative bg-jet-950 overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amethyst-500/30 to-transparent" />
-      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-amethyst-600/10 rounded-full blur-[120px]" />
-      <div className="absolute top-1/3 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-[100px]" />
+    <section id="education" className="relative bg-obsidian-950 overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
+      <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-amber-800/15 rounded-full blur-[120px]" />
+      <div className="absolute top-1/3 right-10 w-80 h-80 bg-amber-500/10 rounded-full blur-[100px]" />
 
       <div className="section-padding max-w-5xl mx-auto">
         {/* Title */}
@@ -46,10 +46,10 @@ export default function Education() {
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <span className="text-cyan-400 font-mono text-sm tracking-wider uppercase">
+          <span className="text-amber-300 font-mono text-sm tracking-wider uppercase">
             — Education
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-50 mt-3">
             Academic Background
           </h2>
         </div>
@@ -59,7 +59,7 @@ export default function Education() {
           {education.map((edu, index) => (
             <div
               key={edu.degree}
-              className={`glass rounded-2xl p-6 sm:p-8 hover:bg-white/5 hover:border-cyan-400/40 transition-all duration-700 group hover:scale-[1.01] ${
+              className={`glass rounded-2xl p-6 sm:p-8 hover:bg-white/5 hover:border-amber-300/40 transition-all duration-700 group hover:scale-[1.01] ${
                 gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: gridVisible ? `${index * 150}ms` : '0ms' }}
@@ -69,33 +69,33 @@ export default function Education() {
                 <div
                   className={`w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
                     index === 0
-                      ? 'bg-gradient-to-br from-amethyst-600 via-amethyst-500 to-cyan-500 text-white shadow-lg shadow-amethyst-950/60'
-                      : 'bg-amethyst-600/20 text-cyan-400 group-hover:bg-cyan-400/20 group-hover:text-cyan-300'
+                      ? 'bg-gradient-to-br from-amber-700 via-amber-500 to-amber-300 text-obsidian-950 font-bold shadow-lg shadow-obsidian-950/70'
+                      : 'bg-amber-800/30 text-amber-300 group-hover:bg-amber-500/20 group-hover:text-amber-50'
                   }`}
                 >
                   <edu.icon
                     size={22}
-                    className={index === 0 ? 'text-white' : 'text-cyan-400 group-hover:text-cyan-300'}
+                    className={index === 0 ? 'text-obsidian-950' : 'text-amber-300 group-hover:text-amber-50'}
                   />
                 </div>
 
                 {/* Content */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-amber-50 group-hover:text-amber-300 transition-colors">
                     {edu.degree}
                   </h3>
-                  <p className="text-amethyst-400 font-semibold text-sm mt-1">{edu.institution}</p>
+                  <p className="text-amber-300 font-semibold text-sm mt-1">{edu.institution}</p>
 
-                  <div className="flex flex-wrap gap-4 text-sm text-jet-400 mt-3">
+                  <div className="flex flex-wrap gap-4 text-sm text-obsidian-400 mt-3">
                     <span className="flex items-center gap-1.5">
-                      <Calendar size={13} className="text-amethyst-400" /> {edu.period}
+                      <Calendar size={13} className="text-amber-500" /> {edu.period}
                     </span>
                     <span className="flex items-center gap-1.5">
-                      <MapPin size={13} className="text-amethyst-400" /> {edu.location}
+                      <MapPin size={13} className="text-amber-500" /> {edu.location}
                     </span>
                   </div>
 
-                  <p className="text-jet-300 text-sm mt-3 leading-relaxed">{edu.highlight}</p>
+                  <p className="text-obsidian-200 text-sm mt-3 leading-relaxed">{edu.highlight}</p>
                 </div>
               </div>
             </div>

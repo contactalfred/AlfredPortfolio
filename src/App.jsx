@@ -14,7 +14,7 @@ export default function App() {
   const [isDark, setIsDark] = useDarkMode();
 
   return (
-    <div className={`min-h-screen ${isDark ? 'bg-jet-950 text-white' : 'bg-jet-50 text-jet-950'}`}>
+    <div className={`min-h-screen ${isDark ? 'bg-obsidian-950 text-amber-50' : 'bg-obsidian-50 text-obsidian-950'}`}>
       <Navbar isDark={isDark} setIsDark={setIsDark} />
       <main>
         <Hero />

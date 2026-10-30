@@ -52,10 +52,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative bg-jet-950 overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amethyst-500/30 to-transparent" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-amethyst-600/12 rounded-full blur-[130px]" />
-      <div className="absolute bottom-10 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-[110px]" />
+    <section id="contact" className="relative bg-obsidian-950 overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-amber-800/15 rounded-full blur-[130px]" />
+      <div className="absolute bottom-10 right-10 w-80 h-80 bg-amber-500/10 rounded-full blur-[110px]" />
 
       <div className="section-padding max-w-6xl mx-auto">
         {/* Title */}
@@ -65,13 +65,13 @@ export default function Contact() {
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <span className="text-cyan-400 font-mono text-sm tracking-wider uppercase">
+          <span className="text-amber-300 font-mono text-sm tracking-wider uppercase">
             — Get In Touch
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-50 mt-3">
             Contact Me
           </h2>
-          <p className="text-jet-300 mt-4 max-w-lg mx-auto">
+          <p className="text-obsidian-300 mt-4 max-w-lg mx-auto">
             Have a question or want to work together? I'd love to hear from you.
           </p>
         </div>
@@ -86,18 +86,18 @@ export default function Contact() {
           <div className="lg:col-span-2 space-y-5">
             {contactInfo.map((item) => {
               const content = (
-                <div className="glass rounded-2xl p-5 flex items-center gap-4 hover:bg-white/5 hover:border-cyan-400/40 transition-all duration-300 group">
-                  <div className="w-12 h-12 rounded-xl bg-amethyst-600/20 flex items-center justify-center group-hover:bg-cyan-400/20 group-hover:shadow-[0_0_12px_rgba(0,240,255,0.25)] transition-all flex-shrink-0">
-                    <item.icon size={20} className="text-cyan-400 group-hover:text-cyan-300" />
+                <div className="glass rounded-2xl p-5 flex items-center gap-4 hover:bg-white/5 hover:border-amber-300/40 transition-all duration-300 group">
+                  <div className="w-12 h-12 rounded-xl bg-amber-800/30 flex items-center justify-center group-hover:bg-amber-500/20 group-hover:shadow-[0_0_12px_rgba(235,193,118,0.25)] transition-all flex-shrink-0">
+                    <item.icon size={20} className="text-amber-300 group-hover:text-amber-50" />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-jet-400 text-xs font-medium mb-0.5">{item.label}</p>
-                    <p className="text-white text-sm font-medium truncate">{item.value}</p>
+                    <p className="text-obsidian-400 text-xs font-medium mb-0.5">{item.label}</p>
+                    <p className="text-amber-50 text-sm font-medium truncate">{item.value}</p>
                   </div>
                   {item.href && (
                     <ArrowUpRight
                       size={14}
-                      className="text-jet-400 group-hover:text-cyan-400 transition-colors ml-auto flex-shrink-0"
+                      className="text-obsidian-400 group-hover:text-amber-300 transition-colors ml-auto flex-shrink-0"
                     />
                   )}
                 </div>
@@ -121,10 +121,10 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="glass rounded-2xl p-6 sm:p-8 space-y-5 border border-amethyst-500/20">
+            <form onSubmit={handleSubmit} className="glass rounded-2xl p-6 sm:p-8 space-y-5 border border-amber-500/25">
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="contact-name" className="block text-jet-300 text-sm font-medium mb-2">
+                  <label htmlFor="contact-name" className="block text-obsidian-200 text-sm font-medium mb-2">
                     Name
                   </label>
                   <input
@@ -133,11 +133,11 @@ export default function Contact() {
                     type="text"
                     required
                     placeholder="Your name"
-                    className="w-full px-4 py-3 rounded-xl bg-jet-850/80 border border-amethyst-500/25 text-white placeholder-jet-400 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/40 focus:border-cyan-400/60 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-obsidian-850/80 border border-amber-500/25 text-amber-50 placeholder-obsidian-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400/40 focus:border-amber-400/60 transition-all"
                   />
                 </div>
                 <div>
-                  <label htmlFor="contact-email" className="block text-jet-300 text-sm font-medium mb-2">
+                  <label htmlFor="contact-email" className="block text-obsidian-200 text-sm font-medium mb-2">
                     Email
                   </label>
                   <input
@@ -146,13 +146,13 @@ export default function Contact() {
                     type="email"
                     required
                     placeholder="your@email.com"
-                    className="w-full px-4 py-3 rounded-xl bg-jet-850/80 border border-amethyst-500/25 text-white placeholder-jet-400 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/40 focus:border-cyan-400/60 transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-obsidian-850/80 border border-amber-500/25 text-amber-50 placeholder-obsidian-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400/40 focus:border-amber-400/60 transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="contact-subject" className="block text-jet-300 text-sm font-medium mb-2">
+                <label htmlFor="contact-subject" className="block text-obsidian-200 text-sm font-medium mb-2">
                   Subject
                 </label>
                 <input
@@ -160,12 +160,12 @@ export default function Contact() {
                   name="subject"
                   type="text"
                   placeholder="What's this about?"
-                  className="w-full px-4 py-3 rounded-xl bg-jet-850/80 border border-amethyst-500/25 text-white placeholder-jet-400 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/40 focus:border-cyan-400/60 transition-all"
+                  className="w-full px-4 py-3 rounded-xl bg-obsidian-850/80 border border-amber-500/25 text-amber-50 placeholder-obsidian-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400/40 focus:border-amber-400/60 transition-all"
                 />
               </div>
 
               <div>
-                <label htmlFor="contact-message" className="block text-jet-300 text-sm font-medium mb-2">
+                <label htmlFor="contact-message" className="block text-obsidian-200 text-sm font-medium mb-2">
                   Message
                 </label>
                 <textarea
@@ -174,17 +174,17 @@ export default function Contact() {
                   rows={5}
                   required
                   placeholder="Your message..."
-                  className="w-full px-4 py-3 rounded-xl bg-jet-850/80 border border-amethyst-500/25 text-white placeholder-jet-400 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400/40 focus:border-cyan-400/60 transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-obsidian-850/80 border border-amber-500/25 text-amber-50 placeholder-obsidian-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400/40 focus:border-amber-400/60 transition-all resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={formStatus === 'sending'}
-                className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-sm transition-all duration-300 ${
+                className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl font-bold text-sm transition-all duration-300 ${
                   formStatus === 'sent'
-                    ? 'bg-amethyst-700 text-cyan-300 border border-cyan-400/40 shadow-lg shadow-amethyst-950/80'
-                    : 'bg-gradient-to-r from-amethyst-600 via-amethyst-500 to-cyan-500 hover:from-amethyst-500 hover:to-cyan-400 text-white shadow-lg shadow-amethyst-950/70 hover:shadow-cyan-400/25 hover:scale-105'
+                    ? 'bg-amber-700 text-amber-50 border border-amber-300/40 shadow-lg shadow-obsidian-950/80'
+                    : 'bg-gradient-to-r from-amber-700 via-amber-500 to-amber-300 hover:from-amber-600 hover:via-amber-400 hover:to-amber-50 text-obsidian-950 shadow-lg shadow-amber-900/70 hover:shadow-amber-400/35 hover:scale-105'
                 }`}
               >
                 {formStatus === 'sent' ? (

@@ -17,13 +17,13 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-jet-950 pt-24 pb-16"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-obsidian-950 pt-24 pb-16"
     >
       {/* Background effects */}
       <div className="absolute inset-0 bg-grid opacity-35" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-amethyst-600/20 rounded-full blur-[110px]" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-cyan-400/15 rounded-full blur-[110px]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-amethyst-800/15 rounded-full blur-[130px]" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-amber-500/18 rounded-full blur-[110px]" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-amber-300/15 rounded-full blur-[110px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-amber-800/25 rounded-full blur-[140px]" />
 
       {/* Floating data particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -31,7 +31,9 @@ export default function Hero() {
           <div
             key={i}
             className={`absolute w-1.5 h-1.5 rounded-full animate-float ${
-              i % 2 === 0 ? 'bg-cyan-400/40 shadow-[0_0_8px_#00f0ff]' : 'bg-amethyst-400/40 shadow-[0_0_8px_#c084fc]'
+              i % 2 === 0
+                ? 'bg-amber-300/60 shadow-[0_0_8px_#EBC176]'
+                : 'bg-amber-500/60 shadow-[0_0_8px_#C48B28]'
             }`}
             style={{
               left: `${12 + i * 11}%`,
@@ -45,18 +47,18 @@ export default function Hero() {
 
       {/* Main content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-        {/* Profile Avatar with Glowing Ring */}
+        {/* Profile Avatar with Amber Mirage Glowing Ring */}
         <div
           className={`relative mx-auto mb-6 w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 transition-all duration-700 ${
             loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
           }`}
         >
           {/* Ambient Glow */}
-          <div className="absolute -inset-2 rounded-full bg-gradient-to-tr from-amethyst-600 via-cyan-400 to-amethyst-500 opacity-70 blur-lg animate-pulse-glow" />
+          <div className="absolute -inset-2 rounded-full bg-gradient-to-tr from-amber-800 via-amber-500 to-amber-300 opacity-75 blur-lg animate-pulse-glow" />
 
           {/* Border ring */}
-          <div className="relative w-full h-full rounded-full p-[3px] bg-gradient-to-tr from-amethyst-500 via-cyan-400 to-amethyst-600 shadow-2xl shadow-amethyst-950/80">
-            <div className="w-full h-full rounded-full overflow-hidden bg-jet-950 border-2 border-jet-900">
+          <div className="relative w-full h-full rounded-full p-[3px] bg-gradient-to-tr from-amber-800 via-amber-500 to-amber-300 shadow-2xl shadow-obsidian-950/80">
+            <div className="w-full h-full rounded-full overflow-hidden bg-obsidian-950 border-2 border-obsidian-850">
               <img
                 src="/profile.jpg"
                 alt="Alfred Mathew"
@@ -66,24 +68,24 @@ export default function Hero() {
           </div>
 
           {/* Online status indicator */}
-          <div className="absolute bottom-1 right-2 w-5 h-5 rounded-full bg-jet-950 flex items-center justify-center p-0.5 shadow-lg border border-amethyst-500/50">
-            <span className="w-full h-full rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_#00f0ff]" />
+          <div className="absolute bottom-1 right-2 w-5 h-5 rounded-full bg-obsidian-950 flex items-center justify-center p-0.5 shadow-lg border border-amber-500/50">
+            <span className="w-full h-full rounded-full bg-amber-300 animate-pulse shadow-[0_0_8px_#EBC176]" />
           </div>
         </div>
 
         {/* Status badge */}
         <div
-          className={`inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-light border border-amethyst-500/30 mb-8 transition-all duration-700 delay-100 ${
+          className={`inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-light border border-amber-500/35 mb-8 transition-all duration-700 delay-100 ${
             loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
           }`}
         >
-          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_8px_#00f0ff]" />
-          <span className="text-cyan-300 text-sm font-medium tracking-wide">Available for opportunities</span>
+          <span className="w-2 h-2 rounded-full bg-amber-300 animate-pulse shadow-[0_0_8px_#EBC176]" />
+          <span className="text-amber-50 text-sm font-medium tracking-wide">Available for opportunities</span>
         </div>
 
         {/* Name */}
         <h1
-          className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-4 tracking-tight transition-all duration-700 delay-200 ${
+          className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-amber-50 mb-4 tracking-tight transition-all duration-700 delay-200 ${
             loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
@@ -97,33 +99,33 @@ export default function Hero() {
             loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <span className="text-2xl sm:text-3xl font-mono text-cyan-400 font-medium drop-shadow-[0_0_12px_rgba(0,240,255,0.4)]">
+          <span className="text-2xl sm:text-3xl font-mono text-amber-300 font-medium drop-shadow-[0_0_14px_rgba(235,193,118,0.45)]">
             {typedText}
           </span>
-          <span className="w-0.5 h-7 bg-cyan-400 ml-1.5 animate-pulse shadow-[0_0_8px_#00f0ff]" />
+          <span className="w-0.5 h-7 bg-amber-300 ml-1.5 animate-pulse shadow-[0_0_8px_#EBC176]" />
         </div>
 
         {/* Tagline */}
         <p
-          className={`text-jet-300 text-lg sm:text-xl max-w-2xl mx-auto mb-4 leading-relaxed transition-all duration-700 delay-400 ${
+          className={`text-obsidian-200 text-lg sm:text-xl max-w-2xl mx-auto mb-4 leading-relaxed transition-all duration-700 delay-400 ${
             loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          Turning <span className="text-white font-medium">raw data</span> into{' '}
-          <span className="text-cyan-300 font-medium">actionable insights</span> using{' '}
-          <span className="text-amethyst-300 font-medium">Excel</span>,{' '}
-          <span className="text-cyan-300 font-medium">SQL</span>,{' '}
-          <span className="text-amethyst-300 font-medium">Python</span> &{' '}
-          <span className="text-cyan-300 font-medium">Power BI</span>.
+          Turning <span className="text-amber-50 font-semibold">raw data</span> into{' '}
+          <span className="text-amber-300 font-semibold">actionable insights</span> using{' '}
+          <span className="text-amber-50 font-medium">Excel</span>,{' '}
+          <span className="text-amber-300 font-medium">SQL</span>,{' '}
+          <span className="text-amber-50 font-medium">Python</span> &{' '}
+          <span className="text-amber-300 font-medium">Power BI</span>.
         </p>
 
         {/* Location */}
         <div
-          className={`flex items-center justify-center gap-1.5 text-jet-400 text-sm mb-10 transition-all duration-700 delay-500 ${
+          className={`flex items-center justify-center gap-1.5 text-obsidian-400 text-sm mb-10 transition-all duration-700 delay-500 ${
             loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <MapPin size={14} className="text-amethyst-400" />
+          <MapPin size={14} className="text-amber-500" />
           <span>Idukki, Kerala, India</span>
         </div>
 
@@ -136,7 +138,7 @@ export default function Hero() {
           <a
             href="/Alfred_Mathew_Resume.pdf"
             download
-            className="group inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-amethyst-600 via-amethyst-500 to-cyan-500 hover:from-amethyst-500 hover:to-cyan-400 text-white font-semibold text-sm shadow-lg shadow-amethyst-950/60 hover:shadow-cyan-500/25 hover:scale-105 transition-all duration-300"
+            className="group inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-700 via-amber-500 to-amber-300 hover:from-amber-600 hover:via-amber-400 hover:to-amber-50 text-obsidian-950 font-bold text-sm shadow-lg shadow-amber-900/60 hover:shadow-amber-500/35 hover:scale-105 transition-all duration-300"
           >
             <Download size={16} className="group-hover:-translate-y-0.5 transition-transform" />
             Download Resume
@@ -146,14 +148,14 @@ export default function Hero() {
               href="https://linkedin.com/in/alfred-mathew-8137ba34b"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 rounded-xl glass-light border border-amethyst-500/25 flex items-center justify-center text-jet-300 hover:text-cyan-400 hover:border-cyan-400/50 hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] transition-all duration-300 hover:scale-110"
+              className="w-12 h-12 rounded-xl glass-light border border-amber-500/30 flex items-center justify-center text-obsidian-300 hover:text-amber-50 hover:border-amber-300/60 hover:bg-amber-500/15 hover:shadow-[0_0_15px_rgba(235,193,118,0.25)] transition-all duration-300 hover:scale-110"
               aria-label="LinkedIn"
             >
               <LinkedinIcon size={20} />
             </a>
             <a
               href="mailto:contactalfredmathew@gmail.com"
-              className="w-12 h-12 rounded-xl glass-light border border-amethyst-500/25 flex items-center justify-center text-jet-300 hover:text-cyan-400 hover:border-cyan-400/50 hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(0,240,255,0.2)] transition-all duration-300 hover:scale-110"
+              className="w-12 h-12 rounded-xl glass-light border border-amber-500/30 flex items-center justify-center text-obsidian-300 hover:text-amber-50 hover:border-amber-300/60 hover:bg-amber-500/15 hover:shadow-[0_0_15px_rgba(235,193,118,0.25)] transition-all duration-300 hover:scale-110"
               aria-label="Email"
             >
               <Mail size={20} />
@@ -170,7 +172,7 @@ export default function Hero() {
           {['Excel', 'SQL', 'Python', 'Power BI'].map((tech) => (
             <span
               key={tech}
-              className="px-4 py-1.5 rounded-full text-xs font-mono font-medium text-cyan-300 bg-amethyst-950/40 border border-amethyst-500/30 hover:border-cyan-400/50 hover:bg-cyan-400/10 hover:text-cyan-200 transition-all duration-300"
+              className="px-4 py-1.5 rounded-full text-xs font-mono font-medium text-amber-50 bg-amber-800/30 border border-amber-500/35 hover:border-amber-300/60 hover:bg-amber-500/20 hover:text-amber-100 transition-all duration-300"
             >
               {tech}
             </span>
@@ -183,7 +185,7 @@ export default function Hero() {
         onClick={() => {
           document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
         }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-jet-400 hover:text-cyan-400 transition-colors animate-bounce"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-obsidian-400 hover:text-amber-300 transition-colors animate-bounce"
         aria-label="Scroll down"
       >
         <ChevronDown size={24} />
