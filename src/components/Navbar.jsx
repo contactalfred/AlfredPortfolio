@@ -41,7 +41,7 @@ export default function Navbar({ isDark, setIsDark }) {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'glass shadow-xl shadow-obsidian-950/80 border-b border-amber-500/20 py-3'
+            ? 'glass shadow-xl shadow-obsidian-950/80 border-b border-sapphire-500/20 py-3'
             : 'bg-transparent py-5'
         }`}
       >
@@ -51,15 +51,15 @@ export default function Navbar({ isDark, setIsDark }) {
             onClick={() => scrollTo('home')}
             className="flex items-center gap-2.5 group"
           >
-            <div className="relative w-9 h-9 rounded-full p-[2px] bg-gradient-to-tr from-amber-800 via-amber-500 to-amber-300 shadow-md shadow-obsidian-950/60 group-hover:scale-110 transition-transform duration-300">
+            <div className="relative w-9 h-9 rounded-full p-[2px] bg-gradient-to-tr from-sapphire-800 via-sapphire-500 to-sapphire-300 shadow-md shadow-obsidian-950/60 group-hover:scale-110 transition-transform duration-300">
               <img
                 src="/profile.jpg"
                 alt="Alfred Mathew"
                 className="w-full h-full rounded-full object-cover object-top"
               />
             </div>
-            <span className="text-amber-50 font-semibold text-lg hidden sm:block tracking-tight">
-              Alfred<span className="text-amber-300">.</span>
+            <span className="text-sapphire-50 font-semibold text-lg hidden sm:block tracking-tight">
+              Alfred<span className="text-sapphire-300">.</span>
             </span>
           </button>
 
@@ -71,8 +71,8 @@ export default function Navbar({ isDark, setIsDark }) {
                 onClick={() => scrollTo(link.id)}
                 className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === link.id
-                    ? 'text-amber-50 bg-amber-500/15 border border-amber-500/30 shadow-[0_0_12px_rgba(235,193,118,0.2)]'
-                    : 'text-obsidian-300 hover:text-amber-50 hover:bg-white/5'
+                    ? 'text-sapphire-50 bg-sapphire-500/20 border border-sapphire-500/35 shadow-[0_0_12px_rgba(123,164,208,0.25)]'
+                    : 'text-obsidian-300 hover:text-sapphire-50 hover:bg-white/5'
                 }`}
               >
                 {link.label}
@@ -84,14 +84,14 @@ export default function Navbar({ isDark, setIsDark }) {
           <div className="flex items-center gap-2">
             <button
               onClick={() => setIsDark(!isDark)}
-              className="w-10 h-10 rounded-lg flex items-center justify-center text-obsidian-300 hover:text-amber-300 hover:bg-white/5 transition-all duration-300"
+              className="w-10 h-10 rounded-lg flex items-center justify-center text-obsidian-300 hover:text-sapphire-300 hover:bg-white/5 transition-all duration-300"
               aria-label="Toggle dark mode"
             >
               {isDark ? <Sun size={18} /> : <Moon size={18} />}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden w-10 h-10 rounded-lg flex items-center justify-center text-obsidian-300 hover:text-amber-50 hover:bg-white/5 transition-all duration-300"
+              className="lg:hidden w-10 h-10 rounded-lg flex items-center justify-center text-obsidian-300 hover:text-sapphire-50 hover:bg-white/5 transition-all duration-300"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -105,15 +105,15 @@ export default function Navbar({ isDark, setIsDark }) {
             isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="px-4 pb-4 pt-2 space-y-1 mx-4 mt-2 glass rounded-2xl border border-amber-500/20">
+          <div className="px-4 pb-4 pt-2 space-y-1 mx-4 mt-2 glass rounded-2xl border border-sapphire-500/25">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollTo(link.id)}
                 className={`block w-full text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeSection === link.id
-                    ? 'text-amber-50 bg-amber-500/15 border border-amber-500/25'
-                    : 'text-obsidian-300 hover:text-amber-50 hover:bg-white/5'
+                    ? 'text-sapphire-50 bg-sapphire-500/20 border border-sapphire-500/30'
+                    : 'text-obsidian-300 hover:text-sapphire-50 hover:bg-white/5'
                 }`}
               >
                 {link.label}
@@ -126,7 +126,7 @@ export default function Navbar({ isDark, setIsDark }) {
       {/* Scroll to Top */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className={`fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-gradient-to-br from-amber-500 to-amber-300 text-obsidian-950 shadow-lg shadow-amber-900/60 hover:shadow-amber-300/40 flex items-center justify-center transition-all duration-500 hover:scale-110 ${
+        className={`fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-gradient-to-br from-sapphire-500 to-sapphire-300 text-obsidian-950 shadow-lg shadow-sapphire-800/60 hover:shadow-sapphire-300/40 flex items-center justify-center transition-all duration-500 hover:scale-110 ${
           showTop ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0 pointer-events-none'
         }`}
         aria-label="Scroll to top"

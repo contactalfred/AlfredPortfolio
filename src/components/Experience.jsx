@@ -45,29 +45,29 @@ function TimelineItem({ exp, index, visible }) {
         <div
           className={`relative z-10 w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
             isCurrent
-              ? 'bg-gradient-to-br from-amber-700 via-amber-500 to-amber-300 shadow-lg shadow-obsidian-950/70 animate-pulse-glow'
-              : 'glass border border-amber-500/25'
+              ? 'bg-gradient-to-br from-sapphire-700 via-sapphire-500 to-sapphire-300 shadow-lg shadow-obsidian-950/70 animate-pulse-glow'
+              : 'glass border border-sapphire-500/25'
           }`}
         >
           <Briefcase size={18} className={isCurrent ? 'text-obsidian-950 font-bold' : 'text-obsidian-400'} />
         </div>
         {index < experiences.length - 1 && (
-          <div className="w-px flex-1 bg-gradient-to-b from-amber-500/50 via-amber-300/40 to-obsidian-700 mt-3" />
+          <div className="w-px flex-1 bg-gradient-to-b from-sapphire-500/50 via-sapphire-300/40 to-obsidian-700 mt-3" />
         )}
       </div>
 
       {/* Content card */}
-      <div className="glass rounded-2xl p-6 sm:p-8 mb-8 flex-1 hover:bg-white/5 hover:border-amber-300/40 transition-all duration-300 group">
+      <div className="glass rounded-2xl p-6 sm:p-8 mb-8 flex-1 hover:bg-white/5 hover:border-sapphire-300/40 transition-all duration-300 group">
         {/* Header */}
         <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
           <div>
-            <h3 className="text-lg sm:text-xl font-bold text-amber-50 group-hover:text-amber-300 transition-colors">
+            <h3 className="text-lg sm:text-xl font-bold text-sapphire-50 group-hover:text-sapphire-300 transition-colors">
               {exp.title}
             </h3>
-            <p className="text-amber-300 font-semibold text-sm mt-1">{exp.company}</p>
+            <p className="text-sapphire-300 font-semibold text-sm mt-1">{exp.company}</p>
           </div>
           {isCurrent && (
-            <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-amber-300/15 text-amber-50 border border-amber-300/35 uppercase tracking-wider shadow-[0_0_8px_rgba(235,193,118,0.2)]">
+            <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-sapphire-300/15 text-sapphire-50 border border-sapphire-300/35 uppercase tracking-wider shadow-[0_0_8px_rgba(123,164,208,0.2)]">
               Current
             </span>
           )}
@@ -76,10 +76,10 @@ function TimelineItem({ exp, index, visible }) {
         {/* Meta */}
         <div className="flex flex-wrap gap-4 text-sm text-obsidian-400 mb-5">
           <span className="flex items-center gap-1.5">
-            <Calendar size={13} className="text-amber-500" /> {exp.period}
+            <Calendar size={13} className="text-sapphire-400" /> {exp.period}
           </span>
           <span className="flex items-center gap-1.5">
-            <MapPin size={13} className="text-amber-500" /> {exp.location}
+            <MapPin size={13} className="text-sapphire-400" /> {exp.location}
           </span>
         </div>
 
@@ -87,7 +87,7 @@ function TimelineItem({ exp, index, visible }) {
         <ul className="space-y-2.5">
           {exp.responsibilities.map((item, i) => (
             <li key={i} className="flex items-start gap-3 text-obsidian-200 text-sm leading-relaxed">
-              <ArrowRight size={14} className="text-amber-300 mt-0.5 flex-shrink-0" />
+              <ArrowRight size={14} className="text-sapphire-300 mt-0.5 flex-shrink-0" />
               {item}
             </li>
           ))}
@@ -103,9 +103,9 @@ export default function Experience() {
 
   return (
     <section id="experience" className="relative bg-obsidian-900 overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-amber-800/20 rounded-full blur-[120px]" />
-      <div className="absolute bottom-10 left-10 w-72 h-72 bg-amber-500/10 rounded-full blur-[100px]" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sapphire-500/30 to-transparent" />
+      <div className="absolute top-1/2 right-0 w-96 h-96 bg-sapphire-800/20 rounded-full blur-[120px]" />
+      <div className="absolute bottom-10 left-10 w-72 h-72 bg-sapphire-500/10 rounded-full blur-[100px]" />
 
       <div className="section-padding max-w-4xl mx-auto">
         {/* Title */}
@@ -115,10 +115,10 @@ export default function Experience() {
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <span className="text-amber-300 font-mono text-sm tracking-wider uppercase">
+          <span className="text-sapphire-300 font-mono text-sm tracking-wider uppercase">
             — Experience
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-50 mt-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-sapphire-50 mt-3">
             Work History
           </h2>
         </div>

@@ -15,11 +15,11 @@ export default function About() {
 
   return (
     <section id="about" className="relative bg-obsidian-950 overflow-hidden">
-      {/* Subtle amber gradient divider */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
+      {/* Subtle sapphire gradient divider */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sapphire-500/30 to-transparent" />
 
       {/* Subtle ambient light */}
-      <div className="absolute -top-32 right-1/4 w-72 h-72 bg-amber-500/10 rounded-full blur-[90px]" />
+      <div className="absolute -top-32 right-1/4 w-72 h-72 bg-sapphire-500/10 rounded-full blur-[90px]" />
 
       <div className="section-padding max-w-6xl mx-auto">
         {/* Section Title */}
@@ -29,10 +29,10 @@ export default function About() {
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <span className="text-amber-300 font-mono text-sm tracking-wider uppercase">
+          <span className="text-sapphire-300 font-mono text-sm tracking-wider uppercase">
             — About Me
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-50 mt-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-sapphire-50 mt-3">
             Get To Know Me
           </h2>
         </div>
@@ -46,10 +46,10 @@ export default function About() {
             }`}
           >
             <p className="text-obsidian-100 text-lg leading-relaxed">
-              I'm <span className="text-amber-50 font-semibold">Alfred Mathew</span>, a{' '}
-              <span className="text-amber-300 font-semibold">B.Com graduate</span> currently
-              working as a <span className="text-amber-50 font-semibold">Data Analyst Intern</span> at{' '}
-              <span className="text-amber-300 font-semibold">CamerinFolks Pvt. Ltd.</span> — where I help
+              I'm <span className="text-sapphire-50 font-semibold">Alfred Mathew</span>, a{' '}
+              <span className="text-sapphire-300 font-semibold">B.Com graduate</span> currently
+              working as a <span className="text-sapphire-50 font-semibold">Data Analyst Intern</span> at{' '}
+              <span className="text-sapphire-300 font-semibold">CamerinFolks Pvt. Ltd.</span> — where I help
               transform complex datasets into clear, actionable insights.
             </p>
             <p className="text-obsidian-300 leading-relaxed">
@@ -60,11 +60,11 @@ export default function About() {
             </p>
             <p className="text-obsidian-300 leading-relaxed">
               I'm detail-oriented and constantly growing my skills in{' '}
-              <span className="text-amber-300 font-medium">SQL</span>,{' '}
-              <span className="text-amber-50 font-medium">Python</span>, and{' '}
-              <span className="text-amber-300 font-medium">Power BI</span> — with the goal of building
+              <span className="text-sapphire-300 font-medium">SQL</span>,{' '}
+              <span className="text-sapphire-50 font-medium">Python</span>, and{' '}
+              <span className="text-sapphire-300 font-medium">Power BI</span> — with the goal of building
               interactive dashboards and uncovering trends that drive smarter decisions. I hold
-              the <span className="text-amber-50 font-medium">Microsoft Office Specialist Excel Expert</span> certification,
+              the <span className="text-sapphire-50 font-medium">Microsoft Office Specialist Excel Expert</span> certification,
               and I'm passionate about clean data and clear storytelling.
             </p>
 
@@ -74,7 +74,7 @@ export default function About() {
                 (tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 rounded-full text-xs font-medium text-amber-50 border border-amber-500/25 bg-amber-800/25 hover:border-amber-300/50 hover:bg-amber-500/20 hover:text-amber-100 transition-all duration-300"
+                    className="px-3 py-1 rounded-full text-xs font-medium text-sapphire-50 border border-sapphire-500/25 bg-sapphire-800/30 hover:border-sapphire-300/50 hover:bg-sapphire-500/20 hover:text-white transition-all duration-300"
                   >
                     {tag}
                   </span>
@@ -91,7 +91,7 @@ export default function About() {
             }`}
           >
             {/* Portrait Card */}
-            <div className="relative group rounded-2xl overflow-hidden glass border border-amber-500/30 p-2 shadow-2xl hover:border-amber-300/50 transition-all duration-500">
+            <div className="relative group rounded-2xl overflow-hidden glass border border-sapphire-500/30 p-2 shadow-2xl hover:border-sapphire-300/50 transition-all duration-500">
               <div className="relative rounded-xl overflow-hidden h-64 sm:h-72">
                 <img
                   src="/profile.jpg"
@@ -99,9 +99,9 @@ export default function About() {
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/20 to-transparent opacity-90" />
-                <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl glass-light border border-amber-500/30 backdrop-blur-md">
-                  <p className="text-amber-50 font-semibold text-sm">Alfred Mathew</p>
-                  <p className="text-amber-300 text-xs font-mono">Data Analyst Intern • CamerinFolks</p>
+                <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl glass-light border border-sapphire-500/30 backdrop-blur-md">
+                  <p className="text-sapphire-50 font-semibold text-sm">Alfred Mathew</p>
+                  <p className="text-sapphire-300 text-xs font-mono">Data Analyst Intern • CamerinFolks</p>
                 </div>
               </div>
             </div>
@@ -111,14 +111,14 @@ export default function About() {
               {highlights.map((item, i) => (
                 <div
                   key={item.label}
-                  className="glass rounded-xl p-4 text-center hover:bg-white/5 hover:scale-105 hover:border-amber-300/40 transition-all duration-300 group"
+                  className="glass rounded-xl p-4 text-center hover:bg-white/5 hover:scale-105 hover:border-sapphire-300/40 transition-all duration-300 group"
                   style={{ animationDelay: `${i * 100}ms` }}
                 >
-                  <div className="w-10 h-10 mx-auto mb-2 rounded-lg bg-amber-800/30 flex items-center justify-center group-hover:bg-amber-500/25 group-hover:shadow-[0_0_12px_rgba(235,193,118,0.25)] transition-all duration-300">
-                    <item.icon size={18} className="text-amber-300 group-hover:text-amber-50 transition-colors" />
+                  <div className="w-10 h-10 mx-auto mb-2 rounded-lg bg-sapphire-800/30 flex items-center justify-center group-hover:bg-sapphire-500/25 group-hover:shadow-[0_0_12px_rgba(123,164,208,0.25)] transition-all duration-300">
+                    <item.icon size={18} className="text-sapphire-300 group-hover:text-sapphire-50 transition-colors" />
                   </div>
                   <p className="text-obsidian-400 text-[11px] font-medium mb-0.5">{item.label}</p>
-                  <p className="text-amber-50 font-semibold text-xs sm:text-sm">{item.value}</p>
+                  <p className="text-sapphire-50 font-semibold text-xs sm:text-sm">{item.value}</p>
                 </div>
               ))}
             </div>

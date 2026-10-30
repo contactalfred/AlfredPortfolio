@@ -19,7 +19,7 @@ const skills = [
 function SkillBar({ skill, visible, index }) {
   return (
     <div
-      className="glass rounded-2xl p-5 hover:bg-white/5 transition-all duration-500 group hover:scale-[1.02] hover:border-amber-300/40"
+      className="glass rounded-2xl p-5 hover:bg-white/5 transition-all duration-500 group hover:scale-[1.02] hover:border-sapphire-300/40"
       style={{
         transitionDelay: visible ? `${index * 80}ms` : '0ms',
         opacity: visible ? 1 : 0,
@@ -28,19 +28,19 @@ function SkillBar({ skill, visible, index }) {
     >
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-amber-800/30 flex items-center justify-center group-hover:bg-amber-500/25 group-hover:shadow-[0_0_12px_rgba(235,193,118,0.25)] transition-all duration-300">
-            <skill.icon size={18} className="text-amber-300 group-hover:text-amber-50 transition-colors" />
+          <div className="w-10 h-10 rounded-xl bg-sapphire-800/30 flex items-center justify-center group-hover:bg-sapphire-500/25 group-hover:shadow-[0_0_12px_rgba(123,164,208,0.25)] transition-all duration-300">
+            <skill.icon size={18} className="text-sapphire-300 group-hover:text-sapphire-50 transition-colors" />
           </div>
           <div>
-            <h3 className="text-amber-50 font-semibold text-sm">{skill.name}</h3>
+            <h3 className="text-sapphire-50 font-semibold text-sm">{skill.name}</h3>
             {skill.cert && (
-              <span className="text-amber-50 text-[10px] font-mono font-medium bg-amber-900/60 border border-amber-500/40 px-2 py-0.5 rounded-full inline-block mt-0.5">
+              <span className="text-sapphire-50 text-[10px] font-mono font-medium bg-sapphire-900/60 border border-sapphire-500/40 px-2 py-0.5 rounded-full inline-block mt-0.5">
                 {skill.cert}
               </span>
             )}
           </div>
         </div>
-        <span className="text-amber-300 font-mono text-sm font-semibold drop-shadow-[0_0_8px_rgba(235,193,118,0.35)]">
+        <span className="text-sapphire-300 font-mono text-sm font-semibold drop-shadow-[0_0_8px_rgba(123,164,208,0.35)]">
           {skill.level}%
         </span>
       </div>
@@ -48,7 +48,7 @@ function SkillBar({ skill, visible, index }) {
       {/* Progress bar */}
       <div className="h-2 bg-obsidian-800 rounded-full overflow-hidden">
         <div
-          className="h-full rounded-full bg-gradient-to-r from-amber-800 via-amber-500 to-amber-300 shadow-[0_0_10px_rgba(235,193,118,0.4)] transition-all duration-1000 ease-out"
+          className="h-full rounded-full bg-gradient-to-r from-sapphire-800 via-sapphire-500 to-sapphire-300 shadow-[0_0_10px_rgba(123,164,208,0.4)] transition-all duration-1000 ease-out"
           style={{
             width: visible ? `${skill.level}%` : '0%',
             transitionDelay: visible ? `${index * 80 + 300}ms` : '0ms',
@@ -67,11 +67,11 @@ export default function Skills() {
 
   return (
     <section id="skills" className="relative bg-obsidian-900 overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sapphire-500/30 to-transparent" />
 
       {/* Background accent */}
-      <div className="absolute top-1/3 right-0 w-96 h-96 bg-amber-800/20 rounded-full blur-[110px]" />
-      <div className="absolute bottom-10 left-10 w-80 h-80 bg-amber-500/10 rounded-full blur-[100px]" />
+      <div className="absolute top-1/3 right-0 w-96 h-96 bg-sapphire-800/20 rounded-full blur-[110px]" />
+      <div className="absolute bottom-10 left-10 w-80 h-80 bg-sapphire-500/10 rounded-full blur-[100px]" />
 
       <div className="section-padding max-w-6xl mx-auto">
         {/* Title */}
@@ -81,10 +81,10 @@ export default function Skills() {
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <span className="text-amber-300 font-mono text-sm tracking-wider uppercase">
+          <span className="text-sapphire-300 font-mono text-sm tracking-wider uppercase">
             — Skills & Tools
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-amber-50 mt-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-sapphire-50 mt-3">
             My Toolkit
           </h2>
           <p className="text-obsidian-300 mt-4 max-w-lg mx-auto">
@@ -97,7 +97,7 @@ export default function Skills() {
           {categories.map((cat) => (
             <div key={cat}>
               <h3 className="text-obsidian-400 font-mono text-xs tracking-widest uppercase mb-4 flex items-center gap-3">
-                <span className="w-8 h-0.5 bg-gradient-to-r from-amber-700 via-amber-500 to-amber-300 rounded-full" />
+                <span className="w-8 h-0.5 bg-gradient-to-r from-sapphire-700 via-sapphire-500 to-sapphire-300 rounded-full" />
                 {cat}
               </h3>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
